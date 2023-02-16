@@ -21,13 +21,12 @@ public class Donation implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private  int id;
-    private String name;
-    private int donor_id;
     private double amount;
     private String currency;
+    @Temporal(value =TemporalType.DATE)
     private Date donation_date;
+    @Enumerated(EnumType.STRING)
     private PaymentMethod payment_method;
-    private int product_id;
     private String message;
     @OneToMany(mappedBy="donation")
     private Set<Ordeer> orders;

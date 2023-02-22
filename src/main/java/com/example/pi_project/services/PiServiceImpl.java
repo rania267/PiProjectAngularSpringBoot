@@ -1,88 +1,93 @@
 package com.example.pi_project.services;
-
 import com.example.pi_project.entities.*;
 import com.example.pi_project.repositories.*;
+
 import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 @Service
 @AllArgsConstructor
 public class PiServiceImpl implements IPiService {
-;
-
-
-    OrdeerRepository orderRepository;
-    DonationRepository donationRepository;
-    CartShoppingRepository cartShoppingRepository;
+    CommentRepository commentRepository;
+   ForumRepository forumRepository;
+    UserRepository userRepository;
+    ForbidenRepository forbidenRepository;
+    MessageRecorderRepository messageRecorderRepository;
+    MessageRepository messageRepository;
 
     @Override
-    public Ordeer addOrder(Ordeer order) {
-        return orderRepository.save(order);
+    public Comment addComment(Comment comment) {
+        return commentRepository.save(comment);
     }
 
     @Override
-    public void deleteOrder(int id) {
-        orderRepository.deleteById(id);
+    public void deleteComment(int id) {
+        commentRepository.deleteById(id);
+
+
     }
 
     @Override
-    public Ordeer updateOrder(Ordeer order) {
-        return orderRepository.save(order);
+    public Comment updateComment(Comment comment) {
+        return commentRepository.save(comment);
     }
 
     @Override
-    public List<Ordeer> getAllOrder() {
-        return orderRepository.findAll();
+    public List<Comment> getAllComment() {
+        return commentRepository.findAll();
     }
 
     @Override
-    public CartShopping addOCart(CartShopping cartShopping) {
-        return cartShoppingRepository.save(cartShopping);
+    public String AddCommentPub(Comment comment, int idForum) {
+        Forum f = forumRepository.findById(idForum).orElse(null);
+        String textbody = comment.getContent();
+        List<Forbiden> badwordlist = (List<Forbiden>) forbidenRepository.findAll();
+        int compteur = 0;
+        for (int i = 0; i < badwordlist.size(); i++) {
+            if (textbody.contains(badwordlist.get(i).getText())) {
+                compteur++;
+            }
+        }
+        if (compteur > 0) {
+            return "your Comment contains " + compteur + " bad words";
+
+        } else {
+            comment.setForum(f);
+            commentRepository.save(comment);
+            return "Comment added successfuly ";
+
+        }
+
+
     }
 
     @Override
-    public void deleteCartShopping(int id) {
-        cartShoppingRepository.deleteById(id);
+    public Message addMsg(Message message) {
+        return messageRepository.save(message);
     }
 
     @Override
-    public CartShopping updateCartShopping(CartShopping cartShopping) {
-        return cartShoppingRepository.save(cartShopping);
+    public void deletemsg(int id) {
+        messageRepository.deleteById(id);
+
     }
 
     @Override
-    public List<CartShopping> getAllCartShopping() {
-        return cartShoppingRepository.findAll();
+    public void save(String sender, String receiver, String messageContent) {
+        MessageRecorder messageEntity = new MessageRecorder();
+        messageEntity.setSenderName(sender);
+        messageEntity.setReceiverName(receiver);
+        messageEntity.setMessageContent(messageContent);
+        messageRecorderRepository.save(messageEntity);
+
+
     }
 
     @Override
-    public Donation addODonation(Donation donation) {
-        return donationRepository.save(donation);
-    }
-
-    @Override
-    public void deleteDonation(int id) {
-donationRepository.deleteById(id);
-    }
-
-    @Override
-    public Donation updateDonation(Donation donation) {
-        return donationRepository.save(donation);
-    }
-
-    @Override
-    public List<Donation> getAllDonation() {
-        return donationRepository.findAll();
+    public List<MessageRecorder> findAllByReceiverName(String receiverName) {
+        return null;
     }
 
 

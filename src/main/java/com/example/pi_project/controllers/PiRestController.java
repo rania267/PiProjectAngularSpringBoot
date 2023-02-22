@@ -1,6 +1,9 @@
 package com.example.pi_project.controllers;
 
-import com.example.pi_project.entities.*;
+import com.example.pi_project.entities.Comment;
+
+import com.example.pi_project.entities.Message;
+import com.example.pi_project.repositories.UserRepository;
 import com.example.pi_project.services.IPiService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,77 +16,50 @@ import java.util.List;
 public class PiRestController {
     @Autowired
     IPiService piService;
+    UserRepository userRepository;
 
 
 
-    @PostMapping("/addOrder")
+    @PostMapping("/addComment")
     @ResponseBody
-    public Ordeer addOrder(@RequestBody Ordeer order) {
-        return piService.addOrder(order);
-    }
-    @PutMapping("/updateOrder")
-    @ResponseBody
-    public Ordeer updateOrder(@RequestBody Ordeer order ){
-        return piService.updateOrder(order);
-    }
-    @DeleteMapping("/deleteOrder/{id}")
-    @ResponseBody
-    public void deleteOrder(@PathVariable("id")int id){
-        piService.deleteOrder(id);
-    }
-    @GetMapping("/AllOrder")
-    @ResponseBody
-    public List<Ordeer> getAllOrder(){
-        return piService.getAllOrder();
+    public Comment addComment (@RequestBody Comment comment) {
+        return piService.addComment(comment);
     }
 
-    @PostMapping("/addCartShopping")
+    @PutMapping("/updateComment")
     @ResponseBody
-    public CartShopping addCart (@RequestBody  CartShopping cartShopping) {
-        return piService.addOCart(cartShopping);
+    public Comment updateComment(@RequestBody Comment comment ){
+        return piService.updateComment(comment);
+    }
+    @DeleteMapping("/deleteComment/{id}")
+    @ResponseBody
+    public void deleteComment(@PathVariable("id")int id) {piService.deleteComment(id);
+    }
+    @GetMapping("/AllComment")
+    @ResponseBody
+    public List<Comment> getAllComment(){
+        return piService.getAllComment();
     }
 
-    @PutMapping("/updateCart")
+    @PostMapping("/add-affectcomment/{idForum}")
     @ResponseBody
-    public CartShopping updateCartShopping(@RequestBody CartShopping cartShopping ){
-        return piService.updateCartShopping(cartShopping);
-    }
-    @DeleteMapping("/deleteCartShopping/{id}")
-    @ResponseBody
-    public void deleteCartShopping(@PathVariable("id")int id){
-        piService.deleteCartShopping(id);
-    }
-    @GetMapping("/AllCartShopping")
-    @ResponseBody
-    public List<CartShopping> getAllCartShopping(){
-        return piService.getAllCartShopping();
+    public String ajouterEtAffceterCommentairePub( @RequestBody Comment comment ,@PathVariable("idForum") int idForum)
+    {
+
+        return piService.AddCommentPub(comment,idForum);
     }
 
 
-
-
-    @PostMapping("/addDonation")
+    @PostMapping("/addMessage")
     @ResponseBody
-    public Donation addDonation (@RequestBody  Donation donation) {
-        return piService.addODonation(donation);
+    public Message updateMessage(@RequestBody Message message ){
+        return piService.addMsg(message);
     }
 
-    @PutMapping("/updateDonation")
+    @DeleteMapping("/deleteMessage/{id}")
     @ResponseBody
-    public Donation updateDonation(@RequestBody Donation donation ){
-        return piService.updateDonation(donation);
+    public void deleteMessage(@PathVariable("id")int id) {piService.deletemsg(id);
     }
-    @DeleteMapping("/deleteDonation/{id}")
-    @ResponseBody
-    public void deleteDonation(@PathVariable("id")int id){
-        piService.deleteDonation(id);
-    }
-    @GetMapping("/AllDonation")
-    @ResponseBody
-    public List<Donation> getAllDonation(){
-        return piService.getAllDonation();
-    }
-
 
 }
 

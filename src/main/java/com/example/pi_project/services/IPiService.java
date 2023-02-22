@@ -1,29 +1,20 @@
-package com.example.pi_project.services;
-
-import com.example.pi_project.entities.*;
+package  com.example.pi_project.services;
+import com.example.pi_project.entities.Comment;
+import com.example.pi_project.entities.Message;
+import com.example.pi_project.entities.MessageRecorder;
 
 import java.util.List;
 
 public interface IPiService {
-
-    public Ordeer addOrder(Ordeer order);
-    public void deleteOrder(int id);
-    public Ordeer updateOrder(Ordeer order);
-    public List<Ordeer> getAllOrder();
-
-
-    public CartShopping addOCart(CartShopping cartShopping);
-    public void deleteCartShopping(int id);
-    public CartShopping updateCartShopping(CartShopping cartShopping);
-    public List<CartShopping> getAllCartShopping();
-
-    public Donation addODonation (Donation  donation);
-    public void deleteDonation (int id);
-    public Donation  updateDonation (Donation  donation);
-    public List<Donation > getAllDonation ();
-
-
-
+    public Comment addComment (Comment  comment);
+    public void deleteComment (int id);
+    public Comment updateComment (Comment  comment);
+    public List<Comment > getAllComment();
+    public String AddCommentPub(Comment comment, int idForum );
+    public Message addMsg (Message message);
+    public void deletemsg ( int id);
+    void save(String sender, String receiver, String messageContent);
+    List<MessageRecorder> findAllByReceiverName(String receiverName);
 
 
 }

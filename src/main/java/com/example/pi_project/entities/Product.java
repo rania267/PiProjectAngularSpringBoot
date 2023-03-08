@@ -7,9 +7,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
-import javax.persistence.criteria.Order;
 import java.io.Serializable;
-import java.util.Locale;
+import java.math.BigDecimal;
 import java.util.Set;
 
 @Entity
@@ -21,12 +20,15 @@ public class Product implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idProduct;
+    private  String name;
     private  String description;
     private float price;
     private int  number;
-
+    private double averageRating;
+    BigDecimal minPrice;
+    BigDecimal maxPrice;
     @ManyToOne
-private CartShopping cartShopping;
+    private CartShopping cartShopping;
 
     @ManyToOne
     private Offer offer;
@@ -36,5 +38,7 @@ private CartShopping cartShopping;
     private Set<CartShopping> cartshopping;
     @ManyToOne
     private Category category;
+
+
 
 }

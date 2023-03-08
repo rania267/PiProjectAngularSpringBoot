@@ -14,6 +14,7 @@ import java.util.Set;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+
 public class Location implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,6 +22,6 @@ public class Location implements Serializable {
     private String city;
     private  String state;
     private String  country;
-    @OneToMany(mappedBy = "location")
-    private Set<Departement> departements ;
+    @OneToMany (mappedBy = "location")
+    private Set<Departement > departements ;
 }

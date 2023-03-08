@@ -30,9 +30,9 @@ public class Provider implements Serializable {
 @JsonIgnore
 private Set<Delivery> deliveries;
 
-    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JsonIgnore
-    private Set<Offer> offers;
+    //@ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    //@JsonIgnore
+    //private Set<Offer> offers;
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JsonIgnore
     private Set<Contract> contracts;

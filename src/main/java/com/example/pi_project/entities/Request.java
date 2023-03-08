@@ -20,7 +20,7 @@ public class Request implements Serializable {
     private int id;
     private String description;
     private int nbr_product;
-    private String type;
+    private String type; //glasses or robot ...
     private float  budget;
     @Temporal(TemporalType.DATE)
     private Date creationDate;

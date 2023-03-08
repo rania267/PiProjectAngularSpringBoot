@@ -1,20 +1,36 @@
-package  com.example.pi_project.services;
-import com.example.pi_project.entities.Comment;
-import com.example.pi_project.entities.Message;
-import com.example.pi_project.entities.MessageRecorder;
+package com.example.pi_project.services;
+
+import com.example.pi_project.entities.Contract;
+import com.example.pi_project.entities.Delivery;
+import com.example.pi_project.entities.Ordeer;
+import com.example.pi_project.entities.Provider;
 
 import java.util.List;
 
 public interface IPiService {
-    public Comment addComment (Comment  comment);
-    public void deleteComment (int id);
-    public Comment updateComment (Comment  comment);
-    public List<Comment > getAllComment();
-    public String AddCommentPub(Comment comment, int idForum );
-    public Message addMsg (Message message);
-    public void deletemsg ( int id);
-    void save(String sender, String receiver, String messageContent);
-    List<MessageRecorder> findAllByReceiverName(String receiverName);
+    public List<Delivery> getAllDeliveries();
+    public List<Contract> getAllContracts();
+    public Contract getContractById(int id);
+    public Delivery addDelivery(Delivery delivery);
+    public Contract addContract(Contract contract);
+    public void deleteDelivery(int id);
+    public Delivery updateDelivery(Delivery delivery);
+    public void deleteContract(int id);
+    public Contract updateContract(Contract contract);
+
+    public Ordeer addOrder(Ordeer order);
+    public void deleteOrder(int id);
+    public Ordeer updateOrder(Ordeer order);
+    public List<Ordeer> getAllOrder();
+
+
+
+
+    public Delivery getDeliveryById(int id);
+    public void deleteProvider(int id);
+    public Provider updateProvider(Provider provider);
+    public List<Provider> getAllProviders();
+    public Provider addProvider(Provider provider);
 
 
 }

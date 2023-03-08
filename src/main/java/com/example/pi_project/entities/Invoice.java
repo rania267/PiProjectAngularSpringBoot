@@ -1,21 +1,18 @@
 package com.example.pi_project.entities;
-
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.Set;
+
+@ToString
 @Entity
 @Getter
 @Setter
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 public class Invoice implements Serializable {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -26,6 +23,5 @@ public class Invoice implements Serializable {
     private  String desciption;
     private  float total;
     @OneToMany (mappedBy = "invoice")
-    private Set<Tax> taxes ;
-
+    private Set<Tax > taxes ;
 }

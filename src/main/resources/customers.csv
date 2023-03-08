@@ -1,0 +1,96 @@
+id,firstName,lastName,email,gender,CIN,Age,date,nombre_enfance,Etat_civil,Bourse,Score,type
+1,yousri,naouali,yousri@gmail.com,Male,52631482,23,2023/06/02 22:02:00,aucune,celibataire,Bource d'étude,1,prosthèse pied
+2,asma,benbrahim,asma@gmail.com,female,08230517,25,2023/08/02 12:02:01,moins de 3,Marie,allocation de chomage,1,prosthèse main
+3,ahmed,ben ali,ahmed@gmail.tn,male,02030158,20,2022/08/02 03:02:01,plus de 3,divorce,aucun,1,prosthèse pied
+4,nour,trabelsi,nour@gmail.tn,Female,01080967,3,2023/07/02 03:02:01,plus de 3,divorce,aucun,1,prosthèse main
+5,imen,nouri,nourimen@gmail.tn,female,02010203,12,2023/08/02 10:02:01,aucune,celibataire,allocation de chomage,1,prosthèse pied
+6,doua,ben ayech,doua@gmail.tn,female,08070509,50,2023/08/02 15:02:01,moins de 3,divorce,Bource d'étude,1,prosthèse main
+7,wael,boursali,boursali@gmail.tn,Male,07030800,40,2023/08/02 09:02:01,moins de 3,divorce,Bource d'étude,1,prosthèse main
+8,islem,ben ouin,ouin@gmail.tn,Female,08020402,10,2021/08/02 03:02:01,plus de 3,divorce,aucun,1,prosthèse pied
+9,Dud,Ishak,dishak0@alexa.com,Male,52631482,23,2023/06/02 22:02:00,plus de 3,celibataire,Bource d'étude,1,prosthèse pied
+10,asma,benbrahim,asma@go.com,female,8230517,25,2023/08/02 12:02:01,moins de 3,Marie,allocation de chomage,1,prosthèse main
+11,ahmed,De Biasi,bdebiasi3@ucla.edu,Female,2030158,20,2022/08/02 03:02:01,plus de 3,divorce,aucun,1,prosthèse pied
+12,Belle,De Biasi,bdebiasi3@ucla.edu,Female,1080967,3,2023/07/02 03:02:01,plus de 3,divorce,aucun,1,prosthèse main
+13,Bing,Filov,bfilov4@engadget.com,Male,2010203,12,2023/08/02 10:02:01,aucune,celibataire,allocation de chomage,1,prosthèse pied
+14,West,Douberday,wdouberday5@mozilla.org,Male,8070509,50,2023/08/02 15:02:01,moins de 3,divorce,Bource d'étude,1,prosthèse main
+15,eya,eya,wdouberday5@mozilla.org,Male,7030800,40,2023/08/02 09:02:01,moins de 3,divorce,Bource d'étude,1,prosthèse main
+16,asma,De Biasi,bdebiasi3@ucla.edu,Female,8020402,10,2021/08/02 03:02:01,plus de 3,divorce,aucun,1,prosthèse pied
+17,Dud,Ishak,dishak0@alexa.com,Male,52631482,23,2023/06/02 22:02:00,plus de 3,celibataire,Bource d'étude,1,prosthèse pied
+18,asma,benbrahim,asma@go.com,female,8230517,25,2023/08/02 12:02:01,moins de 3,Marie,allocation de chomage,1,prosthèse main
+19,ahmed,De Biasi,bdebiasi3@ucla.edu,Female,2030158,20,2022/08/02 03:02:01,plus de 3,divorce,aucun,1,prosthèse pied
+20,Belle,De Biasi,bdebiasi3@ucla.edu,Female,1080967,3,2023/07/02 03:02:01,plus de 3,divorce,aucun,1,prosthèse main
+21,Bing,Filov,bfilov4@engadget.com,Male,2010203,12,2023/08/02 10:02:01,aucune,celibataire,allocation de chomage,1,prosthèse pied
+22,West,Douberday,wdouberday5@mozilla.org,Male,8070509,50,2023/08/02 15:02:01,moins de 3,divorce,Bource d'étude,1,prosthèse main
+23,eya,eya,wdouberday5@mozilla.org,Male,7030800,40,2023/08/02 09:02:01,moins de 3,divorce,Bource d'étude,1,prosthèse main
+24,asma,De Biasi,bdebiasi3@ucla.edu,Female,8020402,10,2021/08/02 03:02:01,plus de 3,divorce,aucun,1,prosthèse pied
+25,Dud,Ishak,dishak0@alexa.com,Male,52631482,23,2023/06/02 22:02:00,plus de 3,celibataire,Bource d'étude,1,prosthèse pied
+26,asma,benbrahim,asma@go.com,female,8230517,25,2023/08/02 12:02:01,moins de 3,Marie,allocation de chomage,1,prosthèse main
+27,ahmed,De Biasi,bdebiasi3@ucla.edu,Female,2030158,20,2022/08/02 03:02:01,plus de 3,divorce,aucun,1,prosthèse pied
+28,Belle,De Biasi,bdebiasi3@ucla.edu,Female,1080967,3,2023/07/02 03:02:01,plus de 3,divorce,aucun,1,prosthèse main
+29,Bing,Filov,bfilov4@engadget.com,Male,2010203,12,2023/08/02 10:02:01,aucune,celibataire,allocation de chomage,1,prosthèse pied
+30,West,Douberday,wdouberday5@mozilla.org,Male,8070509,50,2023/08/02 15:02:01,moins de 3,divorce,Bource d'étude,1,prosthèse main
+31,eya,eya,wdouberday5@mozilla.org,Male,7030800,40,2023/08/02 09:02:01,moins de 3,divorce,Bource d'étude,1,prosthèse main
+32,asma,De Biasi,bdebiasi3@ucla.edu,Female,8020402,10,2021/08/02 03:02:01,plus de 3,divorce,aucun,1,prosthèse pied
+33,Dud,Ishak,dishak0@alexa.com,Male,52631482,23,2023/06/02 22:02:00,plus de 3,celibataire,Bource d'étude,1,prosthèse pied
+34,asma,benbrahim,asma@go.com,female,8230517,25,2023/08/02 12:02:01,moins de 3,Marie,allocation de chomage,1,prosthèse main
+35,ahmed,De Biasi,bdebiasi3@ucla.edu,Female,2030158,20,2022/08/02 03:02:01,plus de 3,divorce,aucun,1,prosthèse pied
+36,Belle,De Biasi,bdebiasi3@ucla.edu,Female,1080967,3,2023/07/02 03:02:01,plus de 3,divorce,aucun,1,prosthèse main
+37,Bing,Filov,bfilov4@engadget.com,Male,2010203,12,2023/08/02 10:02:01,aucune,celibataire,allocation de chomage,1,prosthèse pied
+38,West,Douberday,wdouberday5@mozilla.org,Male,8070509,50,2023/08/02 15:02:01,moins de 3,divorce,Bource d'étude,1,prosthèse main
+39,eya,eya,wdouberday5@mozilla.org,Male,7030800,40,2023/08/02 09:02:01,moins de 3,divorce,Bource d'étude,1,prosthèse main
+40,asma,De Biasi,bdebiasi3@ucla.edu,Female,8020402,10,2021/08/02 03:02:01,plus de 3,divorce,aucun,1,prosthèse pied
+41,asma,benbrahim,asma@go.com,female,1,25,2023/08/02 12:02:01,moins de 3,Marie,allocation de chomage,1,prosthèse main
+42,ahmed,De Biasi,bdebiasi3@ucla.edu,Female,1,20,2022/08/02 03:02:01,plus de 3,divorce,aucun,1,prosthèse pied
+43,Belle,De Biasi,bdebiasi3@ucla.edu,Female,1,3,2023/07/02 03:02:01,plus de 3,divorce,aucun,1,prosthèse main
+44,Bing,Filov,bfilov4@engadget.com,Male,1,12,2023/08/02 10:02:01,aucune,celibataire,allocation de chomage,1,prosthèse pied
+45,West,Douberday,wdouberday5@mozilla.org,Male,1,50,2023/08/02 15:02:01,moins de 3,divorce,Bource d'étude,1,prosthèse main
+46,eya,eya,wdouberday5@mozilla.org,Male,1,40,2023/08/02 09:02:01,moins de 3,divorce,Bource d'étude,1,prosthèse main
+47,asma,De Biasi,bdebiasi3@ucla.edu,Female,1,10,2021/08/02 03:02:01,plus de 3,divorce,aucun,1,prosthèse pied
+48,eya,eya,wdouberday5@mozilla.org,Male,1,40,2023/08/02 09:02:01,moins de 3,divorce,Bource d'étude,1,prosthèse main
+49,ahmed,De Biasi,bdebiasi3@ucla.edu,Female,1,20,2022/08/02 03:02:01,plus de 3,divorce,aucun,1,prosthèse pied
+50,asma,benbrahim,asma@go.com,female,1,25,2023/08/02 12:02:01,moins de 3,Marie,allocation de chomage,1,prosthèse main,prosthèse main
+51,ahmed,De Biasi,bdebiasi3@ucla.edu,Female,1,20,2022/08/02 03:02:01,plus de 3,divorce,aucun,1,prosthèse pied
+52,West,Douberday,wdouberday5@mozilla.org,Male,1,50,2023/08/02 15:02:01,moins de 3,divorce,Bource d'étude,1,prosthèse main
+53,eya,eya,wdouberday5@mozilla.org,Male,1,40,2023/08/02 09:02:01,moins de 3,divorce,Bource d'étude,1,prosthèse main
+54,asma,De Biasi,bdebiasi3@ucla.edu,Female,1,10,2021/08/02 03:02:01,plus de 3,divorce,aucun,1,prosthèse pied
+55,Dud,Ishak,dishak0@alexa.com,Male,10,23,2023/06/02 22:02:00,plus de 3,celibataire,Bource d'étude,1,prosthèse pied
+56,asma,benbrahim,asma@go.com,female,1,25,2023/08/02 12:02:01,moins de 3,Marie,allocation de chomage,1,prosthèse main
+57,ahmed,De Biasi,bdebiasi3@ucla.edu,Female,1,20,2022/08/02 03:02:01,plus de 3,divorce,aucun,1,prosthèse pied
+58,Belle,De Biasi,bdebiasi3@ucla.edu,Female,1,3,2023/07/02 03:02:01,plus de 3,divorce,aucun,1,prosthèse main
+59,Bing,Filov,bfilov4@engadget.com,Male,1,12,2023/08/02 10:02:01,aucune,,celibataire,allocation de chomage,1,prosthèse pied
+60,West,Douberday,wdouberday5@mozilla.org,Male,1,50,2023/08/02 15:02:01,moins de 3,divorce,Bource d'étude,1,prosthèse main
+61,eya,eya,wdouberday5@mozilla.org,Male,1,40,2023/08/02 09:02:01,moins de 3,divorce,Bource d'étude,1,prosthèse main
+62,asma,De Biasi,bdebiasi3@ucla.edu,Female,1,10,2021/08/02 03:02:01,plus de 3,divorce,aucun,1,prosthèse pied
+63,Dud,Ishak,dishak0@alexa.com,Male,10,23,2023/06/02 22:02:00,plus de 3,celibataire,Bource d'étude,1,prosthèse pied
+64,asma,benbrahim,asma@go.com,female,1,25,2023/08/02 12:02:01,moins de 3,Marie,allocation de chomage,1,prosthèse main
+65,ahmed,De Biasi,bdebiasi3@ucla.edu,Female,1,20,2022/08/02 03:02:01,plus de 3,divorce,aucun,1,prosthèse pied
+66,Belle,De Biasi,bdebiasi3@ucla.edu,Female,1,3,2023/07/02 03:02:01,plus de 3,divorce,aucun,1,prosthèse main
+67,Bing,Filov,bfilov4@engadget.com,Male,1,12,2023/08/02 10:02:01,aucune,celibataire,allocation de chomage,1,prosthèse pied
+68,West,Douberday,wdouberday5@mozilla.org,Male,1,50,2023/08/02 15:02:01,moins de 3,divorce,Bource d'étude,1,prosthèse main
+69,eya,eya,wdouberday5@mozilla.org,Male,1,40,2023/08/02 09:02:01,moins de 3,divorce,Bource d'étude,1,prosthèse main
+70,asma,De Biasi,bdebiasi3@ucla.edu,Female,1,10,2021/08/02 03:02:01,plus de 3,divorce,aucun,1,prosthèse pied
+71,Dud,Ishak,dishak0@alexa.com,Male,10,23,2023/06/02 22:02:00,plus de 3,celibataire,Bource d'étude,1,prosthèse pied
+72,asma,benbrahim,asma@go.com,female,1,25,2023/08/02 12:02:01,moins de 3,Marie,allocation de chomage,1,prosthèse main
+73,ahmed,De Biasi,bdebiasi3@ucla.edu,Female,1,20,2022/08/02 03:02:01,plus de 3,divorce,aucun,1,prosthèse pied
+74,Belle,De Biasi,bdebiasi3@ucla.edu,Female,1,3,2023/07/02 03:02:01,plus de 3,divorce,aucun,1,prosthèse main
+75,Bing,Filov,bfilov4@engadget.com,Male,1,12,2023/08/02 10:02:01,aucune,celibataire,allocation de chomage,1,prosthèse pied
+76,West,Douberday,wdouberday5@mozilla.org,Male,1,50,2023/08/02 15:02:01,moins de 3,divorce,Bource d'étude,1,prosthèse main
+77,eya,eya,wdouberday5@mozilla.org,Male,1,40,2023/08/02 09:02:01,moins de 3,divorce,Bource d'étude,1,prosthèse main
+78,asma,De Biasi,bdebiasi3@ucla.edu,Female,1,10,2021/08/02 03:02:01,plus de 3,divorce,aucun,1,prosthèse pied
+79,Dud,Ishak,dishak0@alexa.com,Male,10,23,2023/06/02 22:02:00,plus de 3,celibataire,Bource d'étude,1,prosthèse pied
+80,asma,benbrahim,asma@go.com,female,1,25,2023/08/02 12:02:01,moins de 3,Marie,allocation de chomage,1,prosthèse main
+81,ahmed,De Biasi,bdebiasi3@ucla.edu,Female,1,20,2022/08/02 03:02:01,plus de 3,divorce,aucun,1,prosthèse pied
+82,Belle,De Biasi,bdebiasi3@ucla.edu,Female,1,3,2023/07/02 03:02:01,plus de 3,divorce,aucun,1,prosthèse main
+83,Bing,Filov,bfilov4@engadget.com,Male,1,12,2023/08/02 10:02:01,aucune,celibataire,allocation de chomage,1,prosthèse pied
+84,West,Douberday,wdouberday5@mozilla.org,Male,1,50,2023/08/02 15:02:01,moins de 3,divorce,Bource d'étude,1,prosthèse main
+85,eya,eya,wdouberday5@mozilla.org,Male,1,40,2023/08/02 09:02:01,moins de 3,divorce,Bource d'étude,1,prosthèse main
+86,asma,De Biasi,bdebiasi3@ucla.edu,Female,1,10,2021/08/02 03:02:01,plus de 3,divorce,aucun,1,prosthèse pied
+87,asma,benbrahim,asma@go.com,female,1,25,2023/08/02 12:02:01,moins de 3,Marie,allocation de chomage,1,prosthèse main
+88,ahmed,De Biasi,bdebiasi3@ucla.edu,Female,1,20,2022/08/02 03:02:01,plus de 3,divorce,aucun,1,prosthèse pied
+89,Belle,De Biasi,bdebiasi3@ucla.edu,Female,1,3,2023/07/02 03:02:01,plus de 3,divorce,aucun,1,prosthèse main
+90,Bing,Filov,bfilov4@engadget.com,Male,1,12,2023/08/02 10:02:01,aucune,celibataire,allocation de chomage,1,prosthèse pied
+91,West,Douberday,wdouberday5@mozilla.org,Male,1,50,2023/08/02 15:02:01,moins de 3,divorce,Bource d'étude,1,prosthèse main
+92,eya,eya,wdouberday5@mozilla.org,Male,1,40,2023/08/02 09:02:01,moins de 3,divorce,Bource d'étude,1,prosthèse main
+93,asma,De Biasi,bdebiasi3@ucla.edu,Female,1,10,2021/08/02 03:02:01,plus de 3,divorce,aucun,1,prosthèse pied
+94,eya,eya,wdouberday5@mozilla.org,Male,1,40,2023/08/02 09:02:01,moins de 3,divorce,Bource d'étude,1,prosthèse main
+95,ahmed,De Biasi,bdebiasi3@ucla.edu,Female,1,20,2022/08/02 03:02:01,plus de 3,divorce,aucun,1,prosthèse pied

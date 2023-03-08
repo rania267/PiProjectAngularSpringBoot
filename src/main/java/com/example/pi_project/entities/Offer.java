@@ -34,4 +34,20 @@ public class Offer implements Serializable {
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JsonIgnore
     private Set<Provider> providers;
+    private int nbLikeOffer;
+    private int nb_dislike_offer;
+    private  boolean archived;
+    private boolean hasDiscount = false;
+
+    public boolean getHasDiscount() {
+        return hasDiscount;
+    }
+
+    public void setHasDiscount(boolean hasDiscount) {
+        this.hasDiscount = hasDiscount;
+    }
+
+
+
+
 }

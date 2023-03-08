@@ -1,0 +1,9 @@
+id,firstName,lastName,email,gender,CIN,Age,date,nombre_enfance,Etat_civil,Bourse,Score,type
+1,yousri,naouali,yousri@gmail.com,Male,52631482,23,2023/06/02 22:02:00,aucune,celibataire,Bource d'étude,1,prosthèse pied
+2,asma,benbrahim,asma@gmail.com,female,08230517,25,2023/08/02 12:02:01,moins de 3,Marie,allocation de chomage,1,prosthèse main
+3,ahmed,ben ali,ahmed@gmail.tn,male,02030158,20,2022/08/02 03:02:01,plus de 3,divorce,aucun,1,prosthèse pied
+4,nour,trabelsi,nour@gmail.tn,Female,01080967,3,2023/07/02 03:02:01,plus de 3,divorce,aucun,1,prosthèse main
+5,imen,nouri,nourimen@gmail.tn,female,02010203,12,2023/08/02 10:02:01,aucune,celibataire,allocation de chomage,1,prosthèse pied
+6,doua,ben ayech,doua@gmail.tn,female,08070509,50,2023/08/02 15:02:01,moins de 3,divorce,Bource d'étude,1,prosthèse main
+7,wael,boursali,boursali@gmail.tn,Male,07030800,40,2023/08/02 09:02:01,moins de 3,divorce,Bource d'étude,1,prosthèse main
+8,islem,ben ouin,ouin@gmail.tn,Female,08020402,10,2021/08/02 03:02:01,plus de 3,divorce,aucun,1,prosthèse pied

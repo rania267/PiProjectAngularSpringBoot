@@ -7,21 +7,23 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.List;
 
 @Entity
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Role implements Serializable {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-    @Enumerated(EnumType.STRING)
-    private Type type;
+    @Table(name = "roles")
+    public class Role implements Serializable{
+        @Id
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
+        private Integer id;
 
-    @OneToMany(mappedBy = "role")
-    List<User> users;
+        @Enumerated(EnumType.STRING)
+        @Column(length = 20)
+        private ERole name;
 
-}
+
+
+
+    }

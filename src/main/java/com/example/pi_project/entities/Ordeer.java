@@ -26,4 +26,11 @@ public class Ordeer implements Serializable {
     @JsonIgnore
     private CartShopping Cart;
 
+    //@ManyToOne
+    //@JsonIgnore
+    //private Donation donation;
+
+
+
+
 }

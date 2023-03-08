@@ -1,94 +1,130 @@
 package com.example.pi_project.services;
+
 import com.example.pi_project.entities.*;
 import com.example.pi_project.repositories.*;
-
-import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 @Service
-@AllArgsConstructor
-public class PiServiceImpl implements IPiService {
-    CommentRepository commentRepository;
-   ForumRepository forumRepository;
-    UserRepository userRepository;
-    ForbidenRepository forbidenRepository;
-    MessageRecorderRepository messageRecorderRepository;
-    MessageRepository messageRepository;
-
+public class PiServiceImpl implements IPiService  {
+    @Autowired
+    DeliveryRepository deliveryRepository;
+    @Autowired
+    ContractRepository contractRepository;
     @Override
-    public Comment addComment(Comment comment) {
-        return commentRepository.save(comment);
+    public List<Delivery> getAllDeliveries() {
+        return deliveryRepository.findAll();
+    }
+    @Override
+    public List<Contract> getAllContracts() {
+        return contractRepository.findAll();
+    }
+    @Override
+    public Contract getContractById(int id) {
+        return contractRepository.findById(id).orElse(null);
     }
 
     @Override
-    public void deleteComment(int id) {
-        commentRepository.deleteById(id);
-
-
+    public Delivery getDeliveryById(int id) {
+        return deliveryRepository.findById(id).orElse(null);
     }
 
-    @Override
-    public Comment updateComment(Comment comment) {
-        return commentRepository.save(comment);
-    }
 
     @Override
-    public List<Comment> getAllComment() {
-        return commentRepository.findAll();
-    }
-
-    @Override
-    public String AddCommentPub(Comment comment, int idForum) {
-        Forum f = forumRepository.findById(idForum).orElse(null);
-        String textbody = comment.getContent();
-        List<Forbiden> badwordlist = (List<Forbiden>) forbidenRepository.findAll();
-        int compteur = 0;
-        for (int i = 0; i < badwordlist.size(); i++) {
-            if (textbody.contains(badwordlist.get(i).getText())) {
-                compteur++;
-            }
-        }
-        if (compteur > 0) {
-            return "your Comment contains " + compteur + " bad words";
-
-        } else {
-            comment.setForum(f);
-            commentRepository.save(comment);
-            return "Comment added successfuly ";
-
-        }
-
+    public Delivery addDelivery(Delivery delivery) {
+       return  deliveryRepository.save(delivery);
 
     }
 
     @Override
-    public Message addMsg(Message message) {
-        return messageRepository.save(message);
+    public Contract addContract(Contract contract) {
+        return contractRepository.save(contract);
     }
 
     @Override
-    public void deletemsg(int id) {
-        messageRepository.deleteById(id);
-
+    public void deleteDelivery(int id)  {
+        deliveryRepository.deleteById(id);
     }
 
     @Override
-    public void save(String sender, String receiver, String messageContent) {
-        MessageRecorder messageEntity = new MessageRecorder();
-        messageEntity.setSenderName(sender);
-        messageEntity.setReceiverName(receiver);
-        messageEntity.setMessageContent(messageContent);
-        messageRecorderRepository.save(messageEntity);
+    public Contract updateContract(Contract contract) {
+        return contractRepository.save(contract);
+    }
 
 
+
+    @Override
+    public void deleteContract(int id) {
+        contractRepository.deleteById(id);
+    }
+    @Override
+    public Delivery updateDelivery(Delivery delivery) {
+        return deliveryRepository.save(delivery);
+    }
+
+    @Autowired
+    DeliveryExperienceRepository deliveryExperienceRepository;
+
+
+
+
+    @Autowired
+    OrdeerRepository orderRepository;
+
+    @Override
+    public Ordeer addOrder(Ordeer order) {
+        return orderRepository.save(order);
     }
 
     @Override
-    public List<MessageRecorder> findAllByReceiverName(String receiverName) {
-        return null;
+    public void deleteOrder(int id) {
+        orderRepository.deleteById(id);
     }
+
+    @Override
+    public Ordeer updateOrder(Ordeer order) {
+        return orderRepository.save(order);
+    }
+
+    @Override
+    public List<Ordeer> getAllOrder() {
+        return orderRepository.findAll();
+    }
+
+    @Autowired
+    ProviderRepository providerRepository;
+
+
+    @Override
+    public Provider updateProvider(Provider provider) {
+        return providerRepository.save(provider);
+    }
+
+    @Override
+    public void deleteProvider(int id) {
+        providerRepository.deleteById(id);
+    }
+    @Override
+    public List<Provider> getAllProviders() {
+        return providerRepository.findAll();
+    }
+
+    @Override
+    public Provider addProvider(Provider provider) {
+        return  providerRepository.save(provider);
+
+    }
+
+
 
 
 }

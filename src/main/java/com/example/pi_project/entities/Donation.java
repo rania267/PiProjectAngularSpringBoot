@@ -22,7 +22,7 @@ public class Donation implements Serializable {
     private int id_donation;
     private double montant;
     private String type;
-    private Boolean affected;
+    private Byte affected;
 
     @OneToMany(mappedBy="donation",cascade = CascadeType.ALL)
     @JsonIgnore

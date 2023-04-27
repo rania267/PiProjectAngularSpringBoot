@@ -124,7 +124,7 @@ public class CsvExportService implements CustmerInterface {
             updateCustomer(oldCustomers.get(0));
             List<Donation> donations = donationRepository.getDonationByType(oldCustomers.get(0).getType());
 
-            if (!donations.isEmpty() && donations.get(0).getAffected().equals(Boolean.FALSE)){
+            if (!donations.isEmpty() && donations.get(0).getAffected()==0){
                 affectationRepository.addAffectation(oldCustomers.get(0).getId(),donations.get(0).getId_donation());
                 donationRepository.markDonationAsAffected(donations.get(0).getId_donation());
             }
@@ -135,7 +135,7 @@ public class CsvExportService implements CustmerInterface {
             sortCustomers.get(0).setScore(sortCustomers.get(0).getScore() + 0.5);
             updateCustomer(sortCustomers.get(0));
             List<Donation> donations = donationRepository.getDonationByType(sortCustomers.get(0).getType());
-            if (!donations.isEmpty() && donations.get(0).getAffected().equals(Boolean.FALSE)){
+            if (!donations.isEmpty() && donations.get(0).getAffected()==0){
                 affectationRepository.addAffectation(sortCustomers.get(0).getId(),donations.get(0).getId_donation());
                 donationRepository.markDonationAsAffected(donations.get(0).getId_donation());
 

@@ -3,6 +3,7 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.Set;
 
@@ -16,12 +17,14 @@ public class Invoice implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @Temporal(TemporalType.DATE)
-    private Date deadline;
+
     @Enumerated(EnumType.STRING)
     private TypeInvoice TypeInvoice;
     private  String desciption;
     private  float total;
+    private LocalDateTime deadline;
     @OneToMany (mappedBy = "invoice")
     private Set<Tax > taxes ;
+
+
 }

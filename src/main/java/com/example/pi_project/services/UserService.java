@@ -7,11 +7,12 @@ import org.springframework.stereotype.Service;
 
 import java.time.Duration;
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
 @Service
-public class UserService {
+public class UserService  implements IUserService{
 
     private static final long EXPIRE_TOKEN_AFTER_MINUTES = 30;
 
@@ -89,7 +90,24 @@ public class UserService {
 
         return diff.toMinutes() >= EXPIRE_TOKEN_AFTER_MINUTES;
     }
+    @Override
+    public User addUser(User u) {
+        return userRepository.save(u);
+    }
+    @Override
+    public User updateUser(User u) {
+        return userRepository.save(u);
+    }
 
+    @Override
+    public void deleteUser(Long id) {
+        userRepository.deleteById(id);
+    }
+
+    @Override
+    public List<User> getAllUsers() {
+        return userRepository.findAll();
+    }
 
 
 }

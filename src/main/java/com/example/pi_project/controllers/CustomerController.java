@@ -43,7 +43,7 @@ public class CustomerController {
     }
 
 
-    @PostMapping("/addDonation")
+    @PostMapping("/api/addDonation")
     @Transactional
     @ResponseBody
     public Donation addDonation(@RequestBody Donation donation) {

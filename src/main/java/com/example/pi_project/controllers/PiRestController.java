@@ -3,6 +3,7 @@ package com.example.pi_project.controllers;
 import com.example.pi_project.entities.Contract;
 import com.example.pi_project.entities.Delivery;
 import com.example.pi_project.entities.Ordeer;
+import com.example.pi_project.repositories.ContractRepository;
 import com.example.pi_project.services.DeliveryService;
 import com.example.pi_project.services.IPiService;
 import lombok.AllArgsConstructor;
@@ -18,17 +19,9 @@ public class PiRestController {
     @Autowired
     IPiService piService;
 
+    @Autowired
+    ContractRepository contractRepository;
 
-    @GetMapping("/AllContracts")
-    @ResponseBody
-    public List<Contract> getAllContracts(){
-        return piService.getAllContracts();
-    }
-    @GetMapping("/getContractById/{id}")
-    @ResponseBody
-    public Contract getContractById(@PathVariable("id")int id){
-        return piService.getContractById(id);
-    }
 
     @GetMapping("/getDeliveryById/{id}")
 @ResponseBody
@@ -55,21 +48,15 @@ public Delivery getDeliveryById(@PathVariable("id")int id){
     public Delivery addDelivery (@RequestBody Delivery delivery) {
         return piService.addDelivery(delivery);
     }
-    @PostMapping("/addContract")
-    public Contract addContract (@RequestBody Contract contract) {
-        return piService.addContract(contract);
-    }
+
     //http://localhost:8081/rania/updateDelivery
     @PutMapping("/updateDelivery")
     @ResponseBody
     public Delivery updateDelivery(@RequestBody Delivery delivery){
         return piService.updateDelivery(delivery);
     }
-    @PutMapping("/updateContract")
-    @ResponseBody
-    public Contract updateContract(@RequestBody Contract contract){
-        return piService.updateContract(contract);
-    }
+
+
     //http://localhost:8081/rania/deleteDelivery/1
     @DeleteMapping("/deleteDelivery/{id}")
     @ResponseBody
@@ -78,11 +65,7 @@ public Delivery getDeliveryById(@PathVariable("id")int id){
     }
 
 
-    @DeleteMapping("/deleteContract/{id}")
-    @ResponseBody
-    public void deleteContract(@PathVariable("id")int id){
-        piService.deleteContract(id);
-    }
+    
     @PostMapping("/addOrder")
     @ResponseBody
     public Ordeer addOrder(@RequestBody Ordeer order) {
@@ -107,6 +90,44 @@ public Delivery getDeliveryById(@PathVariable("id")int id){
 
    @Autowired
    private DeliveryService deliveryService;
+
+    @GetMapping("/getContractById/{id}")
+    @ResponseBody
+    public Contract getContractById(@PathVariable("id")int id){
+        return piService.getContractById(id);
+    }
+
+    @GetMapping("/AllContracts")
+    @ResponseBody
+    public List<Contract> getAllContracts(){
+        return piService.getAllContracts();
+    }
+
+    @PostMapping("/addContract")
+    @ResponseBody
+    public Contract addContract (@RequestBody Contract contract) {
+        return piService.addContract(contract);
+    }
+
+
+    @PutMapping("/updateContract")
+    @ResponseBody
+    public Contract updateContract(@RequestBody Contract contract){
+        return piService.updateContract(contract);
+    }
+
+
+
+    @DeleteMapping("/deleteContract/{id}")
+    @ResponseBody
+    public void deleteContract(@PathVariable("id")int id){
+        piService.deleteContract(id);
+    }
+
+
+
+
+
 
 
 }

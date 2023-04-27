@@ -38,7 +38,8 @@ public class Product implements Serializable {
     private Set<CartShopping> cartshopping;
     @ManyToOne
     private Category category;
-
+    @Lob
+    private byte[] image;
 
 
 }

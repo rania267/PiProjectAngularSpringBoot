@@ -94,6 +94,8 @@ public class WebSecurityConfig { // extends WebSecurityConfigurerAdapter {
 			.antMatchers("/sms").permitAll().antMatchers("/reviews").permitAll()
 			.antMatchers("/chatroom").permitAll()
 			.antMatchers("/api").permitAll()
+			.antMatchers("/api/addOffer").hasRole("ADMIN")
+			.antMatchers("/search").permitAll()
 			.anyRequest().authenticated();
 
     http.authenticationProvider(authenticationProvider());

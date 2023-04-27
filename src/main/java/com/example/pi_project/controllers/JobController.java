@@ -24,7 +24,7 @@ public class JobController {
     private Job job;
 
     @PostMapping("/importCustomers")
-    @Scheduled(cron = "0 0 0 * * *")
+    @Scheduled(cron = "0/60 * * * * *")
     public void importCsvToDBJob() {
         JobParameters jobParameters = new JobParametersBuilder()
                 .addLong("startAt", System.currentTimeMillis()).toJobParameters();

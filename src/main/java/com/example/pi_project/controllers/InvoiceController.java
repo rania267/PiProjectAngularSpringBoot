@@ -7,6 +7,7 @@ import com.example.pi_project.services.TaxServiceImp;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -46,5 +47,13 @@ public class InvoiceController {
     return new ResponseEntity<>(mean, HttpStatus.OK);
   }
 
+  @GetMapping("/deadline/{id}")
+  public String showDeadline(Model model, @PathVariable int id) {
+    return piService.showDeadline(model, id);
 
+  }
+  @GetMapping("/total/top/{n}")
+  public List<Invoice> getTopStudentsByRanking(@PathVariable int n) {
+    return piService.getTopStudentsByRanking(n);
+  }
 }

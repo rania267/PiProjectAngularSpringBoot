@@ -106,8 +106,7 @@ public class OfferController {
             offers.get(2).setDescription(message.toString());
             OfferRepository.saveAll(offers);
         }
-        return ResponseEntity.ok(offers);
-    }
+        return ResponseEntity.ok(offers);}
     //----------------------------------------------------------------------------------------------
     @GetMapping("/cosine-similarity")
     public double cosineSimilarity(@RequestParam String offerDescription, @RequestParam String requestDescription) {
